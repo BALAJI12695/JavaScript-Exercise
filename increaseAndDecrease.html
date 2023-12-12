@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase and Decrease</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <a href="./index.html"><button>Home</button></a>
+    <h1>Increase or decrease value using on click button from user input value</h1>
+    <button onclick="decrease()">-</button>
+    <input type="text" id="input1">
+    <button onclick="increase()">+</button>
+
+    <div id="result"></div>
+    
+<script>
+    const input = document.getElementById("input1");
+    const result = document.getElementById("result");
+   
+    function increase(){
+        input.value ++
+        console.log(input.value);
+    }
+    function decrease(){
+        input.value --
+        console.log(input.value);
+    }
+
+
+</script>
+    
+</body>
+</html>

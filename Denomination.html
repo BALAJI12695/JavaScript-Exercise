@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denomination</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <a href="./index.html"><button>Home</button></a>
+    <h1>write a code for  Rupees denomination for user input value  [1,2,5,10,20,50,100,200,500,2000]</h1>
+
+    <input type="text" id="input1" placeholder=" ₹ "> <br> <br>
+    <button onclick="denomination()">Denomination</button> <br> <br>
+    <div id="result" ></div>
+
+    <script>
+
+        const input = document.getElementById("input1");
+        const result = document.getElementById("result");
+
+        function denomination(){
+        
+            let x = (input.value)/2000
+            console.log(x);
+        }
+    </script>
+    
+</body>
+</html>

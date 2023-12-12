@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Unique Value</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="./index.html"><button>Home</button></a>
+    <h1>Show Unique Values from an Array (or remove duplicates)</h1>
+
+    <label for="input1">Array1</label>
+    <input type="text" id="input1" />
+
+    <button onclick="check()">Check</button>
+
+    <script>
+      const input1 = document.getElementById("input1");
+
+      function check() {
+        let inputx = input1.value.split(" ");
+        const uniq = [...new Set(inputx)];
+        console.log(uniq);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse Sentence</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a href="./index.html"><button>Home</button></a>
+    <h1>Reverse Sentence</h1>
+
+    <input type="text" id="sentenceInput" placeholder="Write a Sentence" /> <br />
+    <br />
+    <button onclick="reverseSentence()">Reverse The Sentence</button>
+
+    <div id="showResult"></div>
+
+    <script>
+      const sentenceInput = document.getElementById("sentenceInput");
+      const showResult = document.getElementById("showResult");
+
+      function reverseSentence() {
+        const result = sentenceInput.value.trim().split(" ").reverse().join(" ");
+        console.log(result)
+        sentenceInput.value = "";
+        showResult.innerHTML = result;
+        showResult.style.color = "blue";
+      }
+    </script>
+  </body>
+</html>

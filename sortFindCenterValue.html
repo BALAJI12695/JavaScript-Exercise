@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort the Array and Find the Center Value</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a href="./index.html"><button>Home</button></a>
+    <h1>Sort the Array and Find the Center Value</h1>
+    <label for="input1"></label>
+    <input type="text" id="input1" />
+
+    <button onclick="result()">Check</button>
+
+    <div id="result"></div>
+
+    <script>
+      const input1 = document.getElementById("input1");
+      const show = document.getElementById("result");
+
+      function result() {
+        let inputArray = input1.value.trim().split(" ");
+
+        if ((inputArray.length)%2 == 1) {
+            let centerValue = Math.floor((inputArray.length) / 2)
+            console.log(`the center value value of an array is = ${inputArray[centerValue]}`);
+        } else {
+            let centerValue = inputArray.length / 2
+            console.log(`the center value value of an array is = ${inputArray[centerValue - 1]} & ${inputArray[centerValue]}`);
+        }
+
+      }
+    </script>
+  </body>
+</html>
