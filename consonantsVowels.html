@@ -1,64 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consonants & Vowels</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
     <a href="./index.html"><button>Home</button></a>
-    <h1> Find the number of Consonants & Vowels in user given words </h1>
+    <h1>Find the number of Consonants & Vowels in user given words</h1>
     <label for="input">Write</label>
-    <input type="text" id="input1">
-    <button onclick="ConsonantsVowels()" >Check</button> <br> <br>
-    <div id="result1" ></div>
-    <div id="result2" ></div>
+    <input type="text" id="input1" />
+    <button onclick="ConsonantsVowels()">Check</button> <br />
+    <br />
+    <div id="result1"></div>
+    <div id="result2"></div>
 
     <script>
+      const input1 = document.getElementById("input1");
+      const result1 = document.getElementById("result1");
+      const result2 = document.getElementById("result2");
+      const userConsonants = [];
+      const userVowel = [];
 
-        const input1 = document.getElementById("input1");
-        const result1 = document.getElementById("result1");
-        const result2 = document.getElementById("result2");
-        const userConsonants = []
-        const userVowel = []
-        
-        function ConsonantsVowels(){
-            
-            let input = (input1.value).toUpperCase();           
-            const vowels = ["A","E","I","O","U"];
-            
-            for(i=0;i<input.length;i++)
-            {   
-                if(input[i] =="A"){
-                    userVowel.push(input[i])
-                    result1.innerHTML = `${userVowel} ${userVowel.length} Vowels`
-                }
-                else if(input[i] =="E"){
-                    userVowel.push(input[i])
-                    result1.innerHTML = `${userVowel} ${userVowel.length} Vowels`
-                }
-                else if(input[i] =="I"){
-                    userVowel.push(input[i])
-                    result1.innerHTML = `${userVowel} ${userVowel.length} Vowels`
-                }
-                else if(input[i] =="O"){
-                    userVowel.push(input[i])
-                    result1.innerHTML = `${userVowel} ${userVowel.length} Vowels`
-                }
-                else if(input[i] =="U"){
-                    userVowel.push(input[i])
-                    result1.innerHTML = `${userVowel} ${userVowel.length} Vowels`
-                }
-                else {
-                    userConsonants.push(input[i])
-                    result2.innerHTML = `${userConsonants} ${userConsonants.length} Consonents`
-                }
+      function ConsonantsVowels() {
+        let input = input1.value.toUpperCase();
+        const vowels = ["A", "E", "I", "O", "U"];
 
-            }
-            
+        for (let i = 0; i < input.length; i++) {
+          if (vowels.includes(input[i])) {
+            userVowel.push(input[i]);
+          } else {
+            userConsonants.push(input[i]);
+          }
         }
-    </script>
 
-</body>
+        result1.innerHTML = `${userVowel} ${userVowel.length} Vowels`;
+        result2.innerHTML = `${userConsonants} ${userConsonants.length} Consonants`;
+      }
+    </script>
+  </body>
 </html>
